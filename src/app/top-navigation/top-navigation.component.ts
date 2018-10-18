@@ -20,7 +20,8 @@ export class TopNavigationComponent implements OnInit {
   let model: MatchModel = new MatchModel();
   model.matchId = 1;
   model.matchName = 'CSK Vs MUB';
-  this.matchListModel.matchList.push(model);
+    this.matchModel = model;
+    this.matchListModel.matchList.push(model);
     model = new MatchModel();
   model.matchId = 2;
   model.matchName = 'HYD Vs BAN';

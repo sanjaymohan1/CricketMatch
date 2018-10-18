@@ -1,10 +1,9 @@
 <div class="row">
   <div class="col">
     <div ngbDropdown class="d-inline-block">
-      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle  id="{{modelField}}" name="{{modelField}}" value="{{modelField}}"></button>
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle  id="{{model[idField]}}" name="{{model[idField]}}" value="{{model[idField]}}">{{model[labelField]}}</button>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1" >
-        <button class="dropdown-item" *ngFor="let item of list">{{item.matchName}}</button>
-
+        <button class="dropdown-item" *ngFor="let item of list" (click)="btnClick(item)">{{item.matchName}}</button>
       </div>
     </div>
   </div>

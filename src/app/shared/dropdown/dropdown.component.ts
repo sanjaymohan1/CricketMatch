@@ -21,12 +21,17 @@ export class DropdownComponent implements OnInit {
   ngOnInit() {
   }
 
+  btnClick(selectedOption:any){
+    this.model.matchName = selectedOption.matchName;
+    this.model.matchId = selectedOption.matchId;
+  }
+
   @Input()
-  set model(model: MatchListModel) {
+  set model(model: MatchModel) {
     this._model = model;
   }
 
-  get model(): MatchListModel {
+  get model(): MatchModel {
     return this._model;
   }
 
